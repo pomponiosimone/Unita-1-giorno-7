@@ -119,9 +119,10 @@ console.log(characternames)
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
 let femaleCharacters = [];
-for (let i = 0; i < starWarsCharacters.length; i++)
-  if (starWarsCharacters[i].gender === "female") {
-    femaleCharacters.push( starWarsCharacters[i]);
+for (let i = 0; i < starWarsCharacters.length; i++){
+const current = starWarsCharacters[i]
+  if (current.gender === "female") 
+    femaleCharacters.push( current);
   }
 console.log(femaleCharacters)
 /* ESERCIZIO 4
@@ -143,10 +144,10 @@ let eyeColor = {
 for (let i = 0; i < starWarsCharacters.length; i++) 
 switch (starWarsCharacters[i].eye_color) {
   case "blue":
-   {console.log(eyeColor.blue  = starWarsCharacters[i].eye_color)}
+   {console.log(eyeColor.blue.push  = starWarsCharacters[i].eye_color)}
     break
     case "yellow":
-      {console.log(eyeColor.yellow = starWarsCharacters[i].eye_color)
+      {console.log(eyeColor.yellow.push = starWarsCharacters[i].eye_color)
   }
 }
 
@@ -170,11 +171,25 @@ console.log("la massatotale è:,", crewMass)
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+console.log(crewMass)
+if (crewMass<500)
+  {console.log("ship is under")}
+  else if (700>crewMass>500)
+    {console.log("Ship is half loaded")}
+  else if (700<crewMass>900)
+  {console.log("Warning.load is over 700")}
 
+else if (crewMass>900) {console.log("Critical load: Over 900")}
 /* ESERCIZIO 8
+
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) 
+  if (starWarsCharacters[i].gender === "n/a") [
+    starWarsCharacters[i].gender = "robot"]
+  
+  console.log(starWarsCharacters)
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
